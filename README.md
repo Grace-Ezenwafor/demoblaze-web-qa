@@ -4,9 +4,9 @@ End-to-end manual QA portfolio project for the DemoBlaze e-commerce web applicat
 
 ## Project Overview
 
-This project demonstrates a practical QA workflow from requirements analysis through test design, execution, defect reporting, and traceability.
+This project demonstrates a practical QA workflow from requirements analysis through test design, execution, defect investigation, Jira reporting, and traceability.
 
-The testing work was completed as a portfolio/training project using defined acceptance criteria for the selected DemoBlaze features.
+The work was completed as a portfolio/training project using defined acceptance criteria for selected DemoBlaze features.
 
 ## Features Covered
 
@@ -16,55 +16,43 @@ The testing work was completed as a portfolio/training project using defined acc
 - Cart
 - Checkout
 
-## QA Activities Performed
-
-- Requirements analysis
-- Risk identification
-- Test scenario and test case design
-- Positive and negative testing
-- Manual test execution
-- Regression and retesting concepts
-- Defect investigation
-- Jira bug reporting
-- Test management and execution in Qase
-- Requirements-to-test-to-defect traceability
-
 ## Tools Used
 
 - **Qase** — test case management and manual test execution
 - **Jira** — story and defect tracking
-- **Chrome** — web application testing
+- **Google Chrome** — web application testing
+- **GitHub** — public portfolio documentation
 
-## Test Execution Summary
+## Portfolio Artifacts
 
-### Authentication
+- [Requirements Analysis](docs/requirements-analysis.md)
+- [Test Strategy](docs/test-strategy.md)
+- [Qase Test Case Summary](test-cases/qase-test-cases.md)
+- [Test Execution Summary](test-execution/execution-summary.md)
+- [DBZ-2 — Full Credit Card Number Displayed in Purchase Confirmation](defects/DBZ-2-credit-card-exposure.md)
+- [DBZ-3 — Purchase Can Be Completed Successfully with an Empty Cart](defects/DBZ-3-empty-cart-purchase.md)
 
-- Test cases executed: 11
-- Passed: 11
-- Failed: 0
+## Test Execution Results
 
-### Cart & Checkout
+| Area | Executed | Passed | Failed | Blocked |
+|---|---:|---:|---:|---:|
+| Authentication | 11 | 11 | 0 | 0 |
+| Cart & Checkout | 17 | 15 | 2 | 0 |
+| **Overall** | **28** | **26** | **2** | **0** |
 
-- Test cases executed: 17
-- Passed: 15
-- Failed: 2
-- Blocked: 0
-
-### Overall
-
-- Total test cases executed: 28
-- Passed: 26
-- Failed: 2
-
-## Defects Identified
+## Confirmed Defects
 
 ### DBZ-2 — Full credit card number displayed in purchase confirmation
 
 After a successful checkout, the purchase confirmation displayed the complete test credit-card value instead of omitting or masking it.
 
+**Status:** Open / requires resolution and retesting.
+
 ### DBZ-3 — Purchase completed successfully with an empty cart
 
-The application allowed checkout to complete successfully when no products were present in the cart and displayed a successful purchase confirmation with a zero-value order.
+The application allowed checkout to complete successfully when no products were present in the cart and generated a successful zero-value purchase confirmation.
+
+**Status:** Open / requires resolution and retesting.
 
 ## QA Workflow Demonstrated
 
@@ -79,12 +67,20 @@ Qase Test Cases
     ↓
 Manual Test Execution
     ↓
-Failed Test Investigation
+Failure Investigation
     ↓
-Jira Defect
+Jira Defect Reporting
     ↓
-Traceability / Retest
+Traceability
+    ↓
+Retest after fix
 ```
+
+## Evidence & Privacy
+
+The original testing work was managed in Qase and Jira. This GitHub repository is the public portfolio record, so the important project evidence is documented here in a recruiter-accessible format.
+
+Sensitive-looking test data is intentionally not reproduced in the public defect documentation. In particular, the full test credit-card value used during execution is omitted.
 
 ## Repository Structure
 
@@ -98,16 +94,11 @@ demoblaze-web-qa/
 │   └── qase-test-cases.md
 ├── test-execution/
 │   └── execution-summary.md
-├── defects/
-│   ├── DBZ-2-credit-card-exposure.md
-│   └── DBZ-3-empty-cart-purchase.md
-└── screenshots/
-    ├── qase/
-    └── jira/
+└── defects/
+    ├── DBZ-2-credit-card-exposure.md
+    └── DBZ-3-empty-cart-purchase.md
 ```
-
-The supporting documentation and sanitized evidence will be added progressively as the project is packaged for the portfolio.
 
 ## Career Direction
 
-This project is part of my progression from strong manual QA fundamentals toward **QA Automation Engineering**, with SQL/database testing, API testing, TypeScript, Playwright, Git/GitHub, and CI/CD forming the next stages of the learning path.
+This project is part of my progression from strong manual QA fundamentals toward **QA Automation Engineering**. The next stages of my portfolio will add SQL/database testing, API testing, TypeScript, Playwright, Git workflows, and CI/CD as those skills are completed.
