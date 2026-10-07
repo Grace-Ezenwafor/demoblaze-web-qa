@@ -76,6 +76,20 @@ Traceability
 Retest after fix
 ```
 
+## Visual Evidence
+
+### Qase Test Run
+
+The completed Cart & Checkout test run shows 17 of 17 test cases executed, with 15 passed and 2 failed.
+
+![Qase Cart & Checkout test run](screenshots/qase/test-run-summary.png)
+
+### Jira Defect Tracking
+
+The Jira board shows the Cart & Checkout story alongside the two defects raised from the failed test cases, plus the QA execution summary.
+
+![Jira defect tracking and QA summary](screenshots/jira/defect-tracking.png)
+
 ## Evidence & Privacy
 
 The original testing work was managed in Qase and Jira. This GitHub repository is the public portfolio record, so the important project evidence is documented here in a recruiter-accessible format.
@@ -94,9 +108,14 @@ demoblaze-web-qa/
 │   └── qase-test-cases.md
 ├── test-execution/
 │   └── execution-summary.md
-└── defects/
-    ├── DBZ-2-credit-card-exposure.md
-    └── DBZ-3-empty-cart-purchase.md
+├── defects/
+│   ├── DBZ-2-credit-card-exposure.md
+│   └── DBZ-3-empty-cart-purchase.md
+└── screenshots/
+    ├── qase/
+    │   └── test-run-summary.png
+    └── jira/
+        └── defect-tracking.png
 ```
 
 ## Career Direction
